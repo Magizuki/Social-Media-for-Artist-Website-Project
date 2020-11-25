@@ -1,0 +1,69 @@
+﻿
+CREATE TABLE Roles (
+
+	RolesID INT Identity(1,1) PRIMARY KEY ,
+	RolesName VARCHAR(255) NOT NULL
+
+)
+GO
+CREATE TABLE [User] (
+
+	UserID INT Identity(1,1) PRIMARY KEY,
+	FullName VARCHAR(255) NOT NULL,
+	UserName VARCHAR(255) NOT NULL,
+	Pass VARCHAR(255) NOT NULL,
+	AccountNumber INT NOT NULL,
+	Gender VARCHAR(10) NOT NULL,
+	RolesID INT NOT NULL,
+	FOREIGN KEY (RolesID) REFERENCES Roles (RolesID)
+
+)
+GO
+CREATE TABLE [Image] (
+
+	ImageID INT Identity(1,1) PRIMARY KEY,
+	ImageTitle VARCHAR(255) NOT NULL,
+	Price INT NOT NULL,
+	Picture Image NOT NULL,
+	ImageURL VARCHAR(255) NOT NULL,
+	UserID INT NOT NULL,
+	FOREIGN KEY (UserID) REFERENCES [User] (UserID)
+
+)
+GO
+CREATE TABLE Opinion (
+
+	OpinionID INT Identity(1,1) PRIMARY KEY,
+	UserID INT NOT NULL,
+	ImageID INT NOT NULL,
+	OpinionText VARCHAR(255),
+	FOREIGN KEY (UserID) REFERENCES [User] (UserID),
+	FOREIGN KEY (ImageID) REFERENCES [Image] (ImageID)
+
+)
+GO
+DROP TABLE Payment
+GO
+DROP TABLE PaymentType
+GO
+
+CREATE TABLE PaymentType (
+
+	PaymentTypeID INT Identity(1,1) PRIMARY KEY,
+	PaymentTypeName VARCHAR(255) NOT NULL
+
+)
+GO
+CREATE TABLE Payment (
+
+	PaymentID INT Identity(1,1) PRIMARY KEY,
+	PaymentTypeID INT NOT NULL,
+	ImageID INT NOT NULL,
+	UserID INT NOT NULL,
+	[Date] Date NOT NULL
+	FOREIGN KEY (PaymentTypeID) REFERENCES PaymentType (PaymentTypeID),
+	FOREIGN KEY (ImageID) REFERENCES [Image] (ImageID),
+	FOREIGN KEY (UserID) REFERENCES [USer] (UserID)
+
+)
+

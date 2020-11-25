@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SosArt", "SosArt\SosArt.csproj", "{75246B4D-4471-4B14-95FD-66FCCAF254A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SosArt.Tests", "SosArt.Tests\SosArt.Tests.csproj", "{6DD623F2-B08A-41A0-9C02-037C065363AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75246B4D-4471-4B14-95FD-66FCCAF254A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75246B4D-4471-4B14-95FD-66FCCAF254A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75246B4D-4471-4B14-95FD-66FCCAF254A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75246B4D-4471-4B14-95FD-66FCCAF254A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD623F2-B08A-41A0-9C02-037C065363AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD623F2-B08A-41A0-9C02-037C065363AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD623F2-B08A-41A0-9C02-037C065363AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD623F2-B08A-41A0-9C02-037C065363AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
